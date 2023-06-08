@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>New Calculation</title>
+</head>
+
+<body>
+  <h1>
+  New Calculation
+  </h1>    
+  <button onclick="window.location.href='index.html'">Return Home</button>
+  <button onclick="window.location.href='draft_calculation.html'">View Drafts</button>
+  <button onclick="window.location.href='past_calculation.html'">Past Calculations</button>
+  <br><br>
+
+  <script src="script.js"></script>
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Fuel and Exchange Rate</legend>
+
+<!-- Multiple Radios -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="trade type">Select Trade Type</label>
+  <div class="col-md-4">
+  <div class="radio">
+    <label for="trade type-0">
+      <input type="radio" name="trade type" id="trade type-0" value="1" checked="checked">
+      International
+    </label>
+	</div>
+  <div class="radio">
+    <label for="trade type-1">
+      <input type="radio" name="trade type" id="trade type-1" value="2">
+      Domestic
+    </label>
+	</div>
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Bunker Fuel Rate">Bunker Fuel Rate ($/L):</label>  
+  <div class="col-md-4">
+  <input id="bunker" name="Bunker Fuel Rate" type="text" placeholder="$" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Diesel Fuel Rate">Diesel Fuel Rate ($/L):</label>  
+  <div class="col-md-4">
+  <input id="diesel" name="Diesel Fuel Rate" type="text" placeholder="$" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Currency Exchange Rate (USD to THB)">Currency Exchange Rate (USD to THB):</label>  
+  <div class="col-md-4">
+  <input id="USD" name="Currency Exchange Rate (USD to THB)" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Currency Exchange Rate (MYR to THB)">Currency Exchange Rate (MYR to THB):</label>  
+  <div class="col-md-4">
+  <input id="MYR" name="Currency Exchange Rate (MYR to THB)" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+</fieldset>
+<h1>Port 1</h1>
+
+<fieldset>
+
+  <!-- Form Name -->
+  <legend>Port 1 Details</legend>
+
+  <!-- Select Basic -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="selectbasic">Port Name</label>
+    <div class="col-md-5">
+      <select id="port_name" name="port_name" class="form-control">
+        <option value="1">Bangkok (BK)</option>
+        <option value="2">Ayutthaya - Bangpain (AB)</option>
+        <option value="3">Ayutthaya - Nakorn Luang (ANL)</option>
+        <option value="4">Bahodopi (BHDP)</option>
+        <option value="5">Balikpapan (BPN)</option>
+        <option value="6">Bang Sapan (BS)</option>
+        <option value="7">Bangpakong (BAK)</option>
+        <option value="8">Batam (BAT)</option>
+        <option value="9">Belawan (BRW)</option>
+        <option value="10">Benoa (Bali) (BAO)</option>
+        <option value="">Bintan (BTN)</option>
+        <option value="">Bintulu (BIN)</option>
+        <option value="">Bitung (BIT)</option>
+        <option value="">Bontang (BXT)</option>
+        <option value="">Bourbon (BOUR)</option>
+        <option value="">Brunei (BRU)</option>
+        <option value="">Banyuwangi - Tanjung Wangi (BJU)</option>
+        <option value="">Cai Lan (CLN)</option>
+        <option value="">Cam Pha (CPH)</option>
+        <option value="">Can Tho (VCA)</option>
+        <option value="">Cat Lai (CLI)</option>
+        <option value="">Cayagan de Oro City (Macabalan wharf) (CDO)</option>
+        <option value="">Century Harbour (MHI)</option>
+        <option value="">Chantaburi LaemSing (CLS)</option>
+        <option value="">Chittagong (CTG)</option>
+        <option value="">Cigading (CIG)</option>
+        <option value="">Danang (DAD)</option>
+        <option value="">Davao (Sasa Wharf) (DVO)</option>
+        <option value="">Dumai (DMI)</option>
+        <option value="">Dung Quat (DQT)</option>
+        <option value="">Fangcheng (FAN)</option>
+        <option value="">Futong (FTG)</option>
+        <option value="">Godau port  (GDP)</option>
+        <option value="">Haiphong (HPH)</option>
+        <option value="">Halong Bay (HLG)</option>
+        <option value="">HO CHI MINH (HCM)</option>
+        <option value="">Hon Gai (HON)</option>
+        <option value="">Jakarta (JAK)</option>
+        <option value="">Jambi (JBI)</option>
+        <option value="">K.K. Kota Kinabalu (KK)</option>
+        <option value="">Kampot (KMP)</option>
+        <option value="">Kantang (KTG)</option>
+        <option value="">Kedah (KKH)</option>
+        <option value="">Kelantan (KLT)</option>
+        <option value="">Kemaman (KMN)</option>
+        <option value="">Khanom (KHM)</option>
+        <option value="">Ko Sichang (KSI)</option>
+        <option value="">Kolkata (CCU)</option>
+        <option value="">Kor Samui (KSM)</option>
+        <option value="">Kuantan (KT)</option>
+        <option value="">Kuching (KUC)</option>
+        <option value="">Labuan (LBN)</option>
+        <option value="">Laem Chabang (LCB)</option>
+        <option value="">Lahad Datu (LDU)</option>
+        <option value="">Lhokseumawe (LHOK)</option>
+        <option value="">Lumut (LUM)</option>
+        <option value="">Maeklong (Firesun) (MKG)</option>
+        <option value="">Makassar (MAK)</option>
+        <option value="">Mahachai (MHI)</option>
+        <option value="">Malacca (MAL)</option>
+        <option value="">Manila Habour (MNL)</option>
+        <option value="">Maptaphut (MAT)</option>
+        <option value="">Marunda (MRD)</option>
+        <option value="">Muara (MUR)</option>
+        <option value="">My Tho (MUT)</option>
+        <option value="">Nan Tong (NTG)</option>
+        <option value="">Narathiwat (NAW)</option>
+        <option value="">Nghi Son (NGH)</option>
+        <option value="">Nunukan (NNX)</option>
+        <option value="">Oknha Mong Port (OMP)</option>
+        <option value="">Onomichi (ONO)</option>
+        <option value="">Phumy (PHU)</option>
+        <option value="">Padang - Telux Buyur (TBR)</option>
+        <option value="">PAKAN Baru (PKRU)</option>
+        <option value="">Palembang (PLB)</option>
+        <option value="">Panjang (PNJ)</option>
+        <option value="">Pasir Gudang (PAS)</option>
+        <option value="">Patimban (PTB)</option>
+        <option value="">Pattani (PTN)</option>
+        <option value="">Penang (PNG)</option>
+        <option value="">Phnom Penh (PNH)</option>
+        <option value="">Phra Chulachomklao Fort (PCF)</option>
+        <option value="">Phuket (HKT)</option>
+        <option value="">Plathong Oil Rig (PATO)</option>
+        <option value="">Pontianak (POT)</option>
+        <option value="">Port Klang (PKL)</option>
+        <option value="">Port Moresby (PGPOM)</option>
+        <option value="">Poso (POSO)</option>
+        <option value="">Quinzhou (QZH)</option>
+        <option value="">Quy Nhon (QNN)</option>
+        <option value="">Ranong (UNN)</option>
+        <option value="">Rayong (IRPC)</option>
+        <option value="">Sampit (SMQ)</option>
+        <option value="">Sandakan (SAN)</option>
+        <option value="">Semarang - Tanjung Emas (SRG)</option>
+        <option value="">Sarawak (SRW)</option>
+        <option value="">Sarekei (SRK)</option>
+        <option value="">Sattahip (SATP)</option>
+        <option value="">Semarang (SRG)</option>
+        <option value="">Sibu (SIB)</option>
+        <option value="">Singapore (SG)</option>
+        <option value="">Sipitang (SIP)</option>
+        <option value="">Son Duong (SOD)</option>
+        <option value="">Songkhla (SK)</option>
+        <option value="">Srihanoville (SIH)</option>
+        <option value="">Sriracha Harbor (SRC)</option>
+        <option value="">Sritama Jetty (STM)</option>
+        <option value="">Steung Hav (SHV)</option>
+        <option value="">Sungai Guntung (SGGT)</option>
+        <option value="">Surabaya (SUBY)</option>
+        <option value="">Surat Thanee (SRT)</option>
+        <option value="">Tagbilaran (TAG)</option>
+        <option value="">Tanjung Batu (TJQ)</option>
+        <option value="">Tanjong Manis (TGM)</option>
+        <option value="">Tanjung Priok (TP)</option>
+        <option value="">Tacloban (TAC)</option>
+        <option value="">Tarjun (TAR)</option>
+        <option value="">Tawau (TAW)</option>
+        <option value="">Terengganu (TGG)</option>
+        <option value="">Tha Sala (TSL)</option>
+        <option value="">Tsukumi (TSUM)</option>
+        <option value="">Vung Ang (VAG)</option>
+        <option value="">Vung Tau (VUT)</option>
+        <option value="">Yangon (RGN)</option>
+        <option value="">Hong Kong (HKG)</option>
+        <option value="">Ningde (NDE)</option>
+        <option value="">Beihai (BHY)</option>
+        <option value="">Mawei Fuzhou (FOC)</option>
+        <option value="">Pusan (PUS)</option>
+        <option value="">Dhaka (DKA)</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Select Basic -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="currency">Currency</label>
+    <div class="col-md-4">
+      <select id="currency" name="currency" class="form-control">
+        <option value="1">United States Dollar (USD</option>
+        <option value="2">Thai Bhat (THB)</option>
+        <option value="3">Malaysian Ringgit (MYR)</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Select Basic -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="selectbasic">Shipping Terms</label>
+    <div class="col-md-4">
+      <select id="terms" name="terms" class="form-control">
+        <option value="1">Freight Only</option>
+        <option value="2">Free In Out (FIO)</option>
+        <option value="3">Free-in Liner-out (FILO)</option>
+        <option value="4">Liner-in Free-out (LIFO)</option>
+        <option value="5">Full Liner</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Select Basic -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="activity">Shipping Activity</label>
+    <div class="col-md-4">
+      <select id="activity" name="activity" class="form-control">
+        <option value="1">Loading</option>
+        <option value="2">Discharging</option>
+        <option value="3">Nothing</option>
+      </select>
+    </div>
+  </div>
+
+</fieldset>
+
+</fieldset>
+
+
+<fieldset>
+
+<!-- Form Name -->
+<legend>Port 1 Activity Details</legend>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Cargo Type</label>
+  <div class="col-md-4">
+    <select id="cargo_type" name="cargo_type" class="form-control">
+      <option value="1">N/A</option>
+      <option value="2">Rice Bagged (50KG)</option>
+      <option value="3">Palm Kernel Expeller (PKE)</option>
+      <option value="4">Urea</option>
+      <option value="5">Steel Coil</option>
+      <option value="6">Steel Scrap</option>
+      <option value="7">Wheat Bagged (50KG)</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Cargo Quantity:">Cargo Quantity (MT)</label>  
+  <div class="col-md-4">
+  <input id="Cargo Quantity:" name="Cargo Quantity:" type="text" placeholder="MT" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Loading Days">Port Duration (Days)</label>  
+  <div class="col-md-4">
+  <input id="loading_days" name="Loading Days" type="text" placeholder="Days" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Loading Crane Usage Hours:">Crane Usage Hours</label>  
+  <div class="col-md-4">
+  <input id="crane_usage:" name="Loading Crane Usage Hours:" type="text" placeholder="Hours" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Cargo Brokerage Fees:">Cargo Brokerage Fees</label>  
+  <div class="col-md-4">
+  <input id="brokerage_fees:" name="Cargo Brokerage Fees:" type="text" placeholder="%" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Cargo Freight Rate">Cargo Freight Rate</label>  
+  <div class="col-md-4">
+  <input id="freight_rate" name="Cargo Freight Rate" type="text" placeholder="$" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Port DA">Port Charges (PDA)</label>  
+  <div class="col-md-4">
+  <input id="portda" name="Port DA" type="text" placeholder="$" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Surveying Fees">Surveying Fees</label>  
+  <div class="col-md-4">
+  <input id="surveying_fees" name="Surveying Fees" type="text" placeholder="$" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Other Misc Costs">Other Misc Costs</label>  
+  <div class="col-md-4">
+  <input id="misc_costs" name="Other Misc Costs" type="text" placeholder="$" class="form-control input-md">
+    
+  </div>
+</div>
+<br>
+<!-- Button (Double) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Add Port"></label>
+  <div class="col-md-8">
+
+  </div>
+</div>
+
+</fieldset>
+</form>
+<button onclick="window.location.href='index.html'">Save Draft</button>
+<button onclick="window.location.href='draft_calculation.html'">Add Port</button>
+<button onclick="window.location.href='output.html'">Calculate</button>
+</html> 

@@ -1,0 +1,19 @@
+body {
+  margin: 20px;
+  
+}
+.flex-box {
+  display:flex;
+  justify-content: flex-end;
+}
+.d-table-cell {
+  display:table-cell;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.tar {
+  text-align: right;
+}
