@@ -12,7 +12,7 @@
     <h1>Freight Calculator</h1>
     <div id="errorContainer"></div>
 
-    <form onsubmit="handleFormSubmit(event)">
+    <form id="portsForm" onsubmit="handleFormSubmit(event)">
       <div id="portSections">
         <!-- Fuel and Exchange Rate Section -->
         <div class="form-section fuel-section">
@@ -328,7 +328,8 @@
       <div class="form-group">
         <div id="portSections"></div>
         <button type="button" class="btn btn-primary" onclick="addPortSection('portSections')">Add Another Port</button>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" onclick="submitForm()">
+
       </div>
     </form>
   </div>
