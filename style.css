@@ -1,19 +1,119 @@
+/* Body style */
 body {
-  margin: 20px;
-  
-}
-.flex-box {
-  display:flex;
-  justify-content: flex-end;
-}
-.d-table-cell {
-  display:table-cell;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* Center align the content horizontally */
+  align-items: center; /* Center align the content vertically */
 }
 
-.w-100 {
-  width: 100%;
+/* Form container style */
+.container {
+  max-width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.tar {
+/* Form field style */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  display: inline-block;
+  width: 40%;
+  font-weight: bold;
+  text-align: right; /* Right align the labels */
+  padding-right: 10px; /* Add some right padding for spacing */
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 60%; /* Adjusted width */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: left; /* Left align the input boxes and select dropdown */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* Add/remove button style */
+.btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  margin: 3px; /* Adjust the margin */
+  display: block; /* Display the button as a block element */
+  margin: 0 auto; /* Center align the button horizontally */
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+
+
+/* Success message style */
+.success-message {
+  color: #28a745;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  flex-basis: 40%;
   text-align: right;
+  padding-right: 15px;
+}
+
+.radio-wrapper {
+  flex-basis: 60%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.radio-label input[type="radio"] {
+  margin-right: 2px;
+}
+
+/* Table style */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
 }
