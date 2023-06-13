@@ -1,52 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Calculation Report</title>
+  <title>Output</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    /* Custom style for the Trade Information table */
+    #trade-table {
+      width: 50%; /* Adjust the width as per your preference */
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Calculation Report</h1>
+  <h1>Trade Information</h1>
+  <div id="errorContainer"></div>
 
-  <button onclick="window.location.href='index.html'">Return Home</button>
-  <button onclick="window.location.href='new_calculation.html'">New Calculation</button>
-  <button onclick="window.location.href='draft_calculation.html'">Past Calculations</button>
-
-  <br><br>
-  <button onclick="window.location.href='index.html'">Edit Data</button>
-  <button onclick="window.location.href='new_calculation.html'">Compare</button>
-  <button onclick="window.location.href='draft_calculation.html'">Add Filter</button>
-  <div class="w-100 d-table-cell tar">
-    <button onclick="window.location.href='new_calculation.html'">Download</button>
-    <button onclick="window.location.href='draft_calculation.html'">Search</button>
-  </div>
-  <table>
-    <thead>
+  <div id="trade-info">
+    <table id="trade-table">
       <tr>
-        <th>Select</th>
-        <th>Calculation ID</th>
-        <th>Route</th>
-        <th>Cargo</th>
-        <th>Freight Rate</th>
-        <th>Vessel Name</th>
-        <th>Revenue</th>
-        <th>Cost</th>
-        <th>Expected Net Profit</th>
-        <th>Margin</th>
-        <th>Fuel Cost</th>
-        <th>Percentage Fuel Cost</th>
-        <th>Actual Revenue</th>
-        <th>Actual Cost</th>
-        <th>Actual Net Profit</th>
-        <th>Actual Margin</th>
-        <th>Actual Fuel Cost</th>
-        <th>Actual Percentage Fuel Cost</th>
-        <th>Date Entered</th>
-        <th>Last Modified</th>
+        <th>Bunker Fuel Rate</th>
+        <th>Diesel Fuel Rate</th>
+        <th>Currency Exchange Rate (USD to THB)</th>
+        <th>Currency Exchange Rate (MYR to THB)</th>
+        <th>Trade Type</th>
       </tr>
-    </thead>
-    <tbody>
-      <!-- Add rows for draft entries dynamically -->
-      <!-- You can use JavaScript or a server-side language to generate the rows -->
-    </tbody>
+      <tr id="trade-row">
+        <td id="bunker-fuel-rate"></td>
+        <td id="diesel-fuel-rate"></td>
+        <td id="usd-to-thb-rate"></td>
+        <td id="myr-to-thb-rate"></td>
+        <td id="trade-type"></td>
+      </tr>
+    </table>
+  </div>
+
+  <h1>Port Information</h1>
+  <table id="port-table">
+    <tr>
+      <th>No.</th>
+      <th>Port Name</th>
+      <th>Currency</th>
+      <th>Shipping Terms</th>
+      <th>Shipping Activity</th>
+      <th>Cargo Type</th>
+      <th>Cargo Quantity</th>
+      <th>Loading Days</th>
+      <th>Crane Usage Hours</th>
+      <th>Cargo Brokerage Fees</th>
+      <th>Cargo Freight Rate</th>
+      <th>Port Charges (PDA)</th>
+      <th>Surveying Fees</th>
+      <th>Other Misc Costs</th>
+    </tr>
   </table>
+  <div id="output"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
